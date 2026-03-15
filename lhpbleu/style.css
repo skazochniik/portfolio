@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #243d52 0%,
+    #547592 45%,
+    #375066 100%
+  );
+  color: #e8eef4;
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;              
+}
+
+.paper {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  padding: 4rem 3rem 3.5rem;
+  background: transparent;  
+  box-shadow: none;         
+  color: #0f1820;
+  overflow: hidden;
+
+  z-index: 0;
+ }
+
+
+
+ .paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+ 
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.015) 0px,
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.015) 0px,
+      rgba(0,0,0,0.015) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+.headline {
+  position: relative;
+  text-align: left;
+  margin-bottom: 2.5rem;
+  color: #0a1016;
+}
+
+.headline-label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  opacity: 0.75;
+}
+
+
+.headline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+  width: 38%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0, rgba(10, 16, 22, 0.8) 40%, transparent 100%);
+  opacity: 0.65;
+}
+
+
+
+.texte {
+
+  max-width: none; 
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.normal {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  opacity: 0.75;
+}
+
+
+
+
+.reserve {
+  font-family: "Edwardian Script ITC", "Lucida Calligraphy", "Segoe Script", cursive;
+ font-size: 4em;
+
+  margin-left: 15rem;
+  margin-right: 4.5rem;
+
+  position: relative;
+  display: inline-block;
+  filter: blur(0.13rem);
+  color: #101922;
+
+  text-shadow:
+    0 0 2px rgba(11, 18, 26, 0.6),
+    0 0 7px rgba(11, 18, 26, 0.9);
+
+  transition:
+    filter 0.35s ease,
+    color 0.35s ease,
+    text-shadow 0.35s ease,
+    transform 0.35s ease;
+  cursor: help;
+}
+
+
+
+.reserve:hover {
+  filter: none;
+  color: #fce8b8;
+  text-shadow:
+    0 0 6px rgba(252, 232, 184, 0.95),
+    0 0 18px rgba(249, 210, 125, 0.9),
+    0 0 32px rgba(181, 131, 54, 0.9);
+  transform: translateY(-1px);
+}
+
+.reserve:hover::after {
+  content: attr(data-word);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-family: "Edwardian Script ITC", "Lucida Calligraphy", "Segoe Script", cursive;
+  font-size: 12rem;
+  line-height: 1;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.06);
+
+  filter: blur(6px);
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+.legend {
+  margin-top: 3.2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(7, 11, 16, 0.72);
+}
