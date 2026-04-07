@@ -32,7 +32,7 @@ body.tiny::before {
   );
 }
 
-body.tiny > .topnav,
+
 body.tiny > .mag {
   position: relative;
   z-index: 1;
