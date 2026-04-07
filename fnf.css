@@ -29,7 +29,7 @@ body.fnf::before{
   );
 }
 
-body.fnf > .topnav,
+
 body.fnf > .mag {
   position: relative;
   z-index: 1;
