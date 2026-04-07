@@ -1,0 +1,273 @@
+.lhp{
+  background: radial-gradient(
+    circle at 50% 50%,
+     #35332e 25%,
+     #414036 40%,
+     #252421 70%
+    );
+  
+  
+  color: #fff;
+
+}
+body::before{
+  content:"";
+  position: fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+
+  background:
+  radial-gradient(
+    circle 250px at var(--x) var(--y),
+    rgba(59, 99, 255, 0.3),
+    rgba(59, 99, 255, 0) 50%
+  );
+}
+
+body.lhp::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+:root{
+  --paper:#f5f5f2;
+  --ink:#0b0b0f;
+  --blue:#3b63ff;
+}
+
+.menu{
+  margin-left: auto;
+  padding-right: 180px;
+}
+
+
+.mag{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: calc(var(--navH, 90px) + 10px) 28px 80px;
+
+}
+
+.spread{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  padding: 56px 0;
+  border-top: none;
+}
+
+.col{ position: relative; }
+
+.big{
+  font-family: var(--font-main);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: .9;
+  font-size: clamp(44px, 7vw, 92px);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+
+  color: transparent;
+  -webkit-text-stroke: 0.7px white;
+}
+
+
+
+.lede{
+  margin: 0;
+  max-width: 42ch;
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: .85;
+}
+
+.body{
+  margin: 0 0 14px;
+  max-width: 56ch;
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.9;
+  opacity: .9;
+}
+
+.list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  font-family: var(--font-main);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+
+.tag-vert,
+.caption-vert{
+  position: fixed;
+ left: 85px;
+  top: 20%;
+  color: var(--blue);
+  font-family: var(--font-script);
+  font-size: 55px;
+  letter-spacing: .22em;
+  
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  opacity: .95;
+  user-select: none;
+
+  white-space: nowrap;
+}
+.side-name{
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+
+  writing-mode: vertical-rl;
+
+  font-family: var(--font-script);
+  font-size: 120px;
+  color: #52514d;
+
+  pointer-events: none;
+
+  white-space: nowrap;
+}
+
+
+
+
+
+.end{
+  padding-top: 40px;
+  border-top: 1px solid rgba(0,0,0,.10);
+}
+.end .back{
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--font-main);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: .8;
+}
+.end .back:hover{ opacity: 1; }
+
+
+@media (max-width: 900px){
+  .spread{
+    grid-template-columns: 1fr;
+    gap: 26px;
+  
+  }
+  .tag-vert{ display:none; } }
+
+
+
+
+body.projects-page .mag{
+  margin-top: calc(var(--navH) + 60px);
+  padding: 0 40px 120px;
+}
+
+
+body.projects-page .spread{
+  margin-top: 120px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+
+body.projects-page .spread.hero{
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: none;
+}
+
+
+body.projects-page .body{
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 2;
+  opacity: .9;
+}
+
+
+body.projects-page .big{
+  font-size: clamp(64px, 9vw, 160px);
+  margin-bottom: 30px;
+}
+
+
+.reserve:hover {
+  filter: none;
+  color: #fce8b8;
+  text-shadow:
+    0 0 6px rgba(252, 232, 184, 0.95),
+    0 0 18px rgba(249, 210, 125, 0.9),
+    0 0 32px rgba(181, 131, 54, 0.9);
+  transform: translateY(-1px);
+}
+
+.reserve:hover::after {
+  content: attr(data-word);
+  position: fixed;
+
+  transform: translate(-50%, -50%);
+  
+  font-family: var(--font-main);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 400;
+
+ 
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+.visit-site{
+  margin-top:30px;
+  font-size:16px;
+}
+
+.visit-site a{
+  text-decoration:none;
+  color:white;
+
+  transition: all .25s ease;
+}
+
+.noir a:hover{
+  color:rgba(2, 8, 30, 0.7);
+
+  text-shadow:
+    0 0 6px rgba(13, 13, 13, 0.9),
+    0 0 16px rgba(12, 9, 29, 0.8),
+    0 0 28px rgba(18, 19, 25, 0.7);
+
+  transform: translateY(-1px);
+}
+.blanc a:hover{
+  color:rgba(212, 216, 199, 0.7);
+
+  text-shadow:
+    0 0 6px rgba(193, 208, 160, 0.9),
+    0 0 16px rgba(174, 184, 165, 0.8),
+    0 0 28px rgba(220, 222, 231, 0.7);
+
+  transform: translateY(-1px);
+}
+.bleu a:hover{
+  color:#3b63ff;
+
+  text-shadow:
+    0 0 6px rgba(11, 11, 82, 0.9),
+    0 0 16px rgba(50, 19, 224, 0.8),
+    0 0 28px #3b63ff;
+
+  transform: translateY(-1px);
+}
