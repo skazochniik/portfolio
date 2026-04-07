@@ -1,15 +1,22 @@
-.les-chats{
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #252421;
+  overflow-x: hidden;
+}
+
+body.les-chats {
+  min-height: 100vh;
+  color: #fff;
   background: radial-gradient(
     circle at 50% 50%,
-     #35332e 25%,
-     #414036 40%,
-     #252421 70%
-    );
-  
-  
-  color: #fff;
-
+    #35332e 25%,
+    #414036 40%,
+    #252421 70%
+  );
 }
+
+
 body::before{
   content:"";
   position: fixed;
