@@ -31,7 +31,7 @@ body.sso::before {
   );
 }
 
-body.sso > .topnav,
+
 body.sso > .mag {
   position: relative;
   z-index: 1;
