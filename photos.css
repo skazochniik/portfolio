@@ -31,7 +31,7 @@ body.photos::before {
   );
 }
 
-body.photos > .topnav,
+
 body.photos > .mag {
   position: relative;
   z-index: 1;
