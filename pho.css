@@ -31,7 +31,7 @@ body.pho::before {
   );
 }
 
-body.pho > .topnav,
+
 body.pho > .mag {
   position: relative;
   z-index: 1;
