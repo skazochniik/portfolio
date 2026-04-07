@@ -5,11 +5,20 @@
 }
 
 .projects-page::before{
-  content: "";
+  content:"";
   position: fixed;
-  inset: 0;
-  z-index: -1;
+  inset:0;
+  z-index:0;
   background: url("./assets/hero10.jpg") center / cover no-repeat;
+}
+
+.projects-main{
+  position: relative;
+  z-index: 1;
+  padding-top: 40px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 80px;
 }
 
 
